@@ -10,13 +10,6 @@ stages {
       createS3Bucket('osmangurten-tf-bucket')
     }
   }
-  stage('terraform init and apply -dev'){
-    steps{
-    sh returnStatus: true, script: 'terraform workspace new dev'
-    sh "terraform init"
-    sh "terraform apply -var-file=dev.tfvars -auto-approve"
-      }
-    }
     stage('terraform init and apply -prod'){
       steps{
       sh returnStatus: true, script: 'terraform workspace new prod'
@@ -24,6 +17,13 @@ stages {
       sh "terraform apply -var-file=prod.tfvars -auto-approve"
         }
       }
+      stage('terraform init and apply -dev'){
+        steps{
+        sh returnStatus: true, script: 'terraform workspace new dev'
+        sh "terraform init"
+        sh "terraform apply -var-file=dev.tfvars -auto-approve"
+          }
+        }
   }
 }
 
