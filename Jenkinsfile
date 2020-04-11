@@ -14,6 +14,6 @@ stages {
 }
 
 def getTerraformPath(){
-  tfHome = tool name: 'terraform-12', type: 'terraform'
+  tfHome = tool name: 'terraform-12', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
   return tfHome
 }
