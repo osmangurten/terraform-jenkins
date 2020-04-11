@@ -6,6 +6,6 @@ resource "aws_vpc" "jenkins_vpc" {
 
   tags = {
     Name        = "JENKINS"
-    Environment = "DEV"
+    Environment = "${var.tag_name}"
   }
 }

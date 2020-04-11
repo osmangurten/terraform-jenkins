@@ -18,6 +18,10 @@ variable "vpc_cidr" {
 variable "tenancy" {
   default = "default"
 }
+
+variable "tag_name" {
+  default = "DEV"
+}
 #
 # variable "vpc_id" {}
 #
