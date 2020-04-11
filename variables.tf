@@ -20,7 +20,6 @@ variable "tenancy" {
 }
 
 variable "tag_name" {
-  default = "DEV"
 }
 #
 # variable "vpc_id" {}
