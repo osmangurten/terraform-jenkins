@@ -21,7 +21,7 @@ variable "tenancy" {
 
 variable "tag_name" {
 }
-#
+
 # variable "vpc_id" {}
 #
 # variable "ec2_count" {
